@@ -5,99 +5,234 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ADited Motion Pictures — দেবী চৌধুরানী · The Bandit Queen of Bengal</title>
 <meta name="description" content="ADited Motion Pictures — Indian film production house. Producers of Devi Chowdhurani, the first official Indo-UK co-production in Bengali cinema. In US theatres September 4, 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --gold:#ffd700; --dark:#0d0d0d; --panel:#161616; --line:#2a2a2a; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--dark); color:#eee; line-height:1.6; }
-  .wrap { max-width:980px; margin:0 auto; padding:0 22px; }
-  header { padding:22px 0; border-bottom:1px solid var(--line); }
-  .logo { color:var(--gold); font-size:22px; font-weight:800; letter-spacing:.5px; }
-  .logo span { color:#fff; font-weight:400; }
-  .hero { padding:80px 0 60px; text-align:center; }
-  .hero h1 { font-size:clamp(30px,6vw,52px); color:var(--gold); }
-  .hero .en { font-size:clamp(17px,3vw,24px); color:#fff; margin-top:10px; font-weight:700; }
-  .hero p { color:#bbb; max-width:660px; margin:16px auto 0; }
-  .cta { margin-top:26px; }
-  .btn { display:inline-block; background:var(--gold); color:#000; font-weight:800; text-decoration:none; padding:14px 34px; border-radius:40px; font-size:16px; }
-  .btn.ghost { background:transparent; color:var(--gold); border:2px solid var(--gold); margin-left:10px; }
-  section { padding:52px 0; border-top:1px solid var(--line); }
-  h2 { color:var(--gold); font-size:24px; margin-bottom:18px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
-  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; }
-  .card h3 { color:#fff; font-size:17px; margin-bottom:8px; }
-  .card p { color:#aaa; font-size:14px; }
-  .film { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:24px; }
-  .film h3 { color:var(--gold); font-size:20px; }
-  .film .meta { color:#ccc; font-size:14px; margin:6px 0; }
-  .awards { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; }
-  .awards li { margin:10px 0; color:#ccc; list-style:none; padding-left:26px; position:relative; }
-  .awards li::before { content:"★"; color:var(--gold); position:absolute; left:0; }
-  .team { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
-  .person { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px; text-align:center; }
-  .person .name { color:var(--gold); font-weight:800; }
-  .person .role { color:#aaa; font-size:13px; }
-  footer { text-align:center; color:#666; font-size:13px; padding:36px 0 48px; }
-  a { color:var(--gold); }
+  :root{
+    --bg:#070706; --bg2:#0d0c0a; --panel:#12110f; --line:#26231c;
+    --gold:#d4af37; --gold2:#f0d98c; --cream:#f5f1e6; --muted:#a49c8b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--cream);line-height:1.65;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#000}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;z-index:99;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;
+      padding:18px 34px;background:rgba(7,7,6,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(212,175,55,.14)}
+  nav .brand{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:var(--gold);letter-spacing:.5px}
+  nav .brand small{color:var(--cream);font-family:'Inter';font-weight:400;font-size:12px;letter-spacing:3px;display:block;text-transform:uppercase}
+  nav .links a{color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-left:26px;transition:color .2s}
+  nav .links a:hover{color:var(--gold)}
+  @media(max-width:720px){nav .links{display:none}}
+
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center 25%;transform:scale(1.05)}
+  .hero .bg::after{content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse at 68% 40%,rgba(8,8,8,.15),rgba(7,7,6,.88) 78%),
+               linear-gradient(0deg,rgba(7,7,6,.96) 0%,transparent 55%)}
+  .hero .inner{position:relative;z-index:2;padding:150px 26px 90px;max-width:1180px;margin:0 auto;width:100%}
+  .hero .kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--gold);margin-bottom:20px}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(46px,8.5vw,104px);font-weight:900;line-height:1.0;color:var(--cream)}
+  .hero h1 em{font-style:italic;color:var(--gold)}
+  .hero .en{font-size:clamp(17px,2.6vw,24px);color:var(--cream);margin-top:14px;font-weight:500;letter-spacing:1px}
+  .hero .sub{max-width:560px;color:var(--muted);font-size:16px;margin-top:20px;font-weight:300}
+  .hero .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:15px 34px;border-radius:2px;font-size:14px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;transition:all .25s}
+  .btn.solid{background:var(--gold);color:#000}
+  .btn.solid:hover{background:var(--gold2);transform:translateY(-2px)}
+  .btn.ghost{border:1px solid rgba(245,241,230,.35);color:var(--cream)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .hero .meta{margin-top:54px;display:flex;gap:44px;flex-wrap:wrap}
+  .hero .meta div{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+  .hero .meta b{display:block;color:var(--cream);font-size:21px;font-family:'Playfair Display',serif;letter-spacing:0;text-transform:none;margin-top:4px}
+
+  .marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;background:var(--bg2)}
+  .marquee .track{display:flex;gap:60px;white-space:nowrap;animation:scroll 34s linear infinite;width:max-content}
+  .marquee span{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--muted)}
+  .marquee span b{color:var(--gold);font-style:normal}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  section{padding:110px 0}
+  .sec-head{max-width:680px;margin-bottom:64px}
+  .sec-head .kicker{letter-spacing:4px;text-transform:uppercase;font-size:11px;color:var(--gold);margin-bottom:14px}
+  .sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(30px,4.5vw,50px);font-weight:700;line-height:1.1}
+  .sec-head p{color:var(--muted);margin-top:18px;font-weight:300}
+
+  .filmcard{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center;background:linear-gradient(160deg,#15130e,#0a0a08);border:1px solid var(--line);border-radius:6px;padding:54px}
+  @media(max-width:860px){.filmcard{grid-template-columns:1fr;padding:28px}}
+  .filmcard .poster{position:relative;aspect-ratio:2/3;overflow:hidden;border-radius:4px;box-shadow:0 34px 90px rgba(0,0,0,.65)}
+  .filmcard .poster img{width:100%;height:100%;object-fit:cover}
+  .filmcard .poster .badge{position:absolute;top:14px;left:-34px;transform:rotate(-45deg);background:var(--gold);color:#000;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 40px}
+  .filmcard h3{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);line-height:1.12}
+  .filmcard .credits{color:var(--muted);font-size:14px;margin-top:18px;line-height:2}
+  .filmcard .awards{margin-top:22px;display:flex;flex-direction:column;gap:9px}
+  .filmcard .awards span{font-size:13.5px;color:var(--gold2)}
+  .filmcard .buttons{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .filmcard .tbtn{background:var(--gold);color:#000;font-weight:600;text-decoration:none;padding:14px 30px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;border-radius:2px;display:inline-block}
+  .filmcard .wbtn{border:1px solid rgba(245,241,230,.35);color:var(--cream);text-decoration:none;padding:14px 30px;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;border-radius:2px;display:inline-block}
+  .filmcard .wbtn:hover{border-color:var(--gold);color:var(--gold)}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .gallery img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:4px;border:1px solid var(--line);transition:transform .5s}
+  .gallery img:hover{transform:scale(1.03)}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .stats div{background:var(--bg);padding:38px 26px;text-align:center}
+  .stats b{font-family:'Playfair Display',serif;font-size:38px;color:var(--gold);display:block}
+  .stats span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+
+  .awardslist{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .aw{border:1px solid var(--line);background:var(--panel);padding:30px;border-radius:4px;display:flex;gap:18px;align-items:flex-start}
+  .aw .star{font-size:26px;color:var(--gold);line-height:1}
+  .aw h3{font-size:16px;margin-bottom:6px}
+  .aw p{color:var(--muted);font-size:13.5px}
+
+  .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+  .person{border:1px solid var(--line);background:var(--panel);padding:32px 24px;text-align:center;border-radius:4px}
+  .person .mono{font-size:34px}
+  .person .name{font-family:'Playfair Display',serif;font-size:20px;color:var(--gold);margin-top:10px}
+  .person .role{color:var(--muted);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+
+  footer{border-top:1px solid var(--line);padding:80px 0 60px;background:var(--bg2)}
+  footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px}
+  @media(max-width:760px){footer .cols{grid-template-columns:1fr}}
+  footer h4{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:16px}
+  footer a{display:block;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:9px}
+  footer a:hover{color:var(--gold)}
+  footer .copy{margin-top:60px;color:#5c564a;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="logo">ADITED <span>MOTION PICTURES</span></div></div></header>
+<nav>
+  <div class="brand">ADITED<small>Motion Pictures</small></div>
+  <div class="links">
+    <a href="#film">The Film</a><a href="#recognition">Recognition</a><a href="#gallery">Gallery</a><a href="#team">Team</a><a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<div class="wrap">
-  <div class="hero">
-    <h1>দেবী চৌধুরানী</h1>
+<div class="hero">
+  <div class="bg" style="background-image:url(assets/master-poster.jpg)"></div>
+  <div class="inner">
+    <div class="kicker">ADited Motion Pictures presents</div>
+    <h1>দেবী<br>চৌধুরানী</h1>
     <div class="en">The Bandit Queen of Bengal</div>
-    <p>An ADited Motion Pictures production — the first official Indo-UK co-production in Bengali cinema, now releasing theatrically across the United States on September 4, 2026.</p>
+    <p class="sub">The first woman freedom fighter of India against the British colonial rulers — told on the big screen as the first official Indo-UK co-production in Bengali cinema. In US theatres September 4, 2026.</p>
     <div class="cta">
-      <a class="btn" href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Get Tickets</a>
+      <a class="btn solid" href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Get Tickets</a>
       <a class="btn ghost" href="https://www.facebook.com/events/942171612261069/">RSVP — Release Event</a>
+    </div>
+    <div class="meta">
+      <div>India Release<b>Sep 2025</b></div>
+      <div>US Release<b>Sep 4, 2026</b></div>
+      <div>Runtime<b>134 min</b></div>
+      <div>Language<b>Bengali + EN subs</b></div>
     </div>
   </div>
 </div>
 
-<section><div class="wrap">
-  <h2>ABOUT</h2>
-  <p style="color:#ccc;">ADited Motion Pictures is an Indian production house telling stories that travel. Our debut feature, <b>দেবী চৌধুরানী</b>, brought Bankim Chandra Chattopadhyay's legendary heroine to the big screen as the first official Indo-UK co-production in Bengali cinema — released theatrically in India (September 2025) and now across the United States (September 4, 2026).</p>
-</div></section>
+<div class="marquee"><div class="track">
+  <span>দেবী চৌধুরানী <b>·</b> The Bandit Queen of Bengal</span><span>Closing Film <b>·</b> 9th London Bengali Film Festival</span><span>Best Film (Popular Choice) <b>·</b> NABC IFFA 2026, New York</span><span>Based on <b>Bankim Chandra Chattopadhyay</b></span>
+  <span>দেবী চৌধুরানী <b>·</b> The Bandit Queen of Bengal</span><span>Closing Film <b>·</b> 9th London Bengali Film Festival</span><span>Best Film (Popular Choice) <b>·</b> NABC IFFA 2026, New York</span><span>Based on <b>Bankim Chandra Chattopadhyay</b></span>
+</div></div>
 
-<section><div class="wrap">
-  <h2>THE FILM</h2>
-  <div class="film">
-    <h3>Devi Chowdhurani — The Bandit Queen of Bengal</h3>
-    <div class="meta">The first woman freedom fighter of India against the British colonial rulers — a 134-minute Bengali epic with English subtitles.</div>
-    <div class="meta"><b>Cast:</b> Srabanti Chatterjee · Prosenjit Chatterjee · Sabyasachi Chakrabarty · Arjun Chakrabarty</div>
-    <div class="meta"><b>Director:</b> Subhrajit Mitra · <b>Music:</b> Pandit Bickram Ghosh</div>
-    <div class="meta"><b>Based on</b> Bankim Chandra Chattopadhyay's classic novel · <b>India release:</b> September 2025 · <b>US release:</b> September 4, 2026</div>
+<section id="film"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="kicker">The Film</div>
+    <h2>A heroine who refused<br>to bow.</h2>
+  </div>
+  <div class="filmcard reveal">
+    <div class="poster"><span class="badge">New Release</span><img src="assets/master-poster.jpg" alt="Devi Chowdhurani poster"></div>
+    <div>
+      <h3>Devi Chowdhurani —<br>The Bandit Queen of Bengal</h3>
+      <div class="credits">
+        <b>Cast</b> — Srabanti Chatterjee · Prosenjit Chatterjee · Sabyasachi Chakrabarty · Arjun Chakrabarty<br>
+        <b>Director</b> — Subhrajit Mitra &nbsp;·&nbsp; <b>Music</b> — Pandit Bickram Ghosh<br>
+        <b>Story</b> — Bankim Chandra Chattopadhyay's 1884 classic novel<br>
+        <b>Format</b> — Bengali with English subtitles · 134 minutes · Colour
+      </div>
+      <div class="awards">
+        <span>★ Closing film — 9th London Bengali Film Festival</span>
+        <span>★ Best Film (Popular Choice) — NABC IFFA 2026, New York</span>
+        <span>★ First official Indo-UK co-production in Bengali cinema — announced at WAVES 2025</span>
+      </div>
+      <div class="buttons">
+        <a class="tbtn" href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book Tickets</a>
+        <a class="wbtn" href="https://www.youtube.com/watch?v=AQ8uMKULiVs">Watch Trailer</a>
+      </div>
+    </div>
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <h2>RECOGNITION</h2>
-  <div class="awards">
-    <li>Closing film — 9th London Bengali Film Festival</li>
-    <li>Best Film (Popular Choice) — NABC IFFA 2026, New York</li>
-    <li>First official Indo-UK co-production in Bengali cinema</li>
+<section id="recognition" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="kicker">Recognition</div>
+    <h2>Festivals, audiences<br>and the press.</h2>
+  </div>
+  <div class="stats reveal" style="margin-bottom:44px">
+    <div><b>1st</b><span>Indo-UK co-production in Bengali cinema</span></div>
+    <div><b>2M+</b><span>Teaser views</span></div>
+    <div><b>346K</b><span>Trailer views</span></div>
+    <div><b>9th</b><span>London BFF closing film</span></div>
+  </div>
+  <div class="awardslist">
+    <div class="aw reveal"><div class="star">★</div><div><h3>London Bengali Film Festival</h3><p>Closing film, 9th edition — a festival honour for the year's most anticipated Bengali release.</p></div></div>
+    <div class="aw reveal"><div class="star">★</div><div><h3>NABC IFFA 2026 · New York</h3><p>Best Film (Popular Choice) — voted by the North American Bengali community.</p></div></div>
+    <div class="aw reveal"><div class="star">★</div><div><h3>WAVES 2025 · Mumbai</h3><p>First official Indo-UK treaty co-production in Bengali cinema, announced by the Ministry of I&amp;B.</p></div></div>
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <h2>PRODUCERS</h2>
+<section id="gallery"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="kicker">Gallery</div>
+    <h2>From the film.</h2>
+  </div>
+  <div class="gallery reveal">
+    <img src="assets/lbff-card.jpg" alt="London Bengali Film Festival closing film card">
+    <img src="assets/master-poster.jpg" alt="Devi Chowdhurani — main poster">
+    <img src="assets/lbff-card.jpg" alt="Festival recognition">
+  </div>
+</div></section>
+
+<section id="team" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head reveal">
+    <div class="kicker">Team</div>
+    <h2>The people behind<br>the picture.</h2>
+  </div>
   <div class="team">
-    <div class="person"><div class="name">Aparna Dasgupta</div><div class="role">Producer</div></div>
-    <div class="person"><div class="name">Aniruddha Dasgupta</div><div class="role">Producer</div></div>
-    <div class="person"><div class="name">Soumyajit Majumdar</div><div class="role">Producer</div></div>
+    <div class="person reveal"><div class="mono">🎬</div><div class="name">Aparna Dasgupta</div><div class="role">Producer</div></div>
+    <div class="person reveal"><div class="mono">🎬</div><div class="name">Aniruddha Dasgupta</div><div class="role">Producer</div></div>
+    <div class="person reveal"><div class="mono">🎬</div><div class="name">Soumyajit Majumdar</div><div class="role">Producer</div></div>
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <h2>FOLLOW</h2>
-  <div class="grid">
-    <div class="card"><h3>Facebook</h3><p><a href="https://www.facebook.com/105059348617032">ADited Motion Pictures</a></p></div>
-    <div class="card"><h3>Distribution</h3><p>US theatrical release by <a href="https://andasgup-git.github.io/space-time-cinemas/">Space-Time Cinemas</a></p></div>
-    <div class="card"><h3>Watch</h3><p>Trailer &amp; songs on YouTube — <a href="https://www.youtube.com/watch?v=AQ8uMKULiVs">watch the trailer</a></p></div>
+<footer id="contact"><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>ADited Motion Pictures</h4>
+      <p style="color:var(--muted);font-size:14px">Indian film production house. Stories that travel — from Kolkata to the world.</p>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a href="https://www.facebook.com/105059348617032">Facebook</a>
+      <a href="https://www.youtube.com/watch?v=AQ8uMKULiVs">YouTube — Trailer</a>
+      <a href="https://andasgup-git.github.io/space-time-cinemas/">Space-Time Cinemas (Distribution)</a>
+    </div>
+    <div>
+      <h4>Now</h4>
+      <a href="https://fremont.cinelounge.com/movie/Devi_Chowdhurani_Bandit_Queen_of_Bengal_Bengali">Book tickets</a>
+      <a href="https://www.facebook.com/events/942171612261069/">Release event</a>
+    </div>
   </div>
-</div></section>
+  <div class="copy"><span>© 2026 ADited Motion Pictures</span><span>দেবী চৌধুরানী · The Bandit Queen of Bengal</span></div>
+</div></footer>
 
-<footer>© 2026 ADited Motion Pictures · <a href="https://github.com/andasgup-git/adited-motionpictures">Source</a></footer>
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
